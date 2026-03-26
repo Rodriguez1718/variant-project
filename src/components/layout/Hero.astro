@@ -28,127 +28,178 @@ const {
 ---
 
 <section
-  class="relative h-screen flex items-center overflow-hidden md:bg-transparent"
-  style="background: linear-gradient(135deg, var(--midnight-navy) 0%, color-mix(in srgb, var(--midnight-navy) 80%, var(--steel-blue) 20%) 100%);"
+  class="relative h-screen flex items-center overflow-hidden"
+  style="background: radial-gradient(ellipse at center top, rgba(51, 65, 85, 0.3) 0%, rgba(30, 41, 59, 0.8) 30%, rgba(15, 23, 42, 0.95) 60%, rgba(2, 6, 23, 1) 100%), linear-gradient(180deg, rgba(30, 41, 59, 0.4) 0%, rgba(15, 23, 42, 0.8) 50%, rgba(2, 6, 23, 1) 100%);"
 >
   <!-- Background Image Slideshow - Hidden on Mobile -->
   <div class="absolute inset-0 hidden md:block">
     <div
       class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-0 transition-opacity duration-[1500ms] ease-in-out slideshow-image active"
-      style="background-image: url('/images/img1.avif'); filter: brightness(0.6);"
+      style="background-image: url('/images/img1.avif'); filter: brightness(0.15) contrast(1.2);"
     >
     </div>
     <div
       class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-0 transition-opacity duration-[1500ms] ease-in-out slideshow-image"
-      style="background-image: url('/images/img2.avif'); filter: brightness(0.6);"
+      style="background-image: url('/images/img2.avif'); filter: brightness(0.15) contrast(1.2);"
     >
     </div>
     <div
       class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-0 transition-opacity duration-[1500ms] ease-in-out slideshow-image"
-      style="background-image: url('/images/img3.avif'); filter: brightness(0.6);"
+      style="background-image: url('/images/img3.avif'); filter: brightness(0.15) contrast(1.2);"
     >
     </div>
     <div
       class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-0 transition-opacity duration-[1500ms] ease-in-out slideshow-image"
-      style="background-image: url('/images/img4.avif'); filter: brightness(0.6);"
+      style="background-image: url('/images/img4.avif'); filter: brightness(0.15) contrast(1.2);"
     >
     </div>
     <div
       class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-0 transition-opacity duration-[1500ms] ease-in-out slideshow-image"
-      style="background-image: url('/images/img5.avif'); filter: brightness(0.6);"
+      style="background-image: url('/images/img5.avif'); filter: brightness(0.15) contrast(1.2);"
     >
     </div>
   </div>
 
-  <!-- Dark Overlay - Only on Desktop -->
+  <!-- Dark Overlay with subtle gradient -->
   <div
-    class="absolute inset-0 opacity-60 hidden md:block"
-    style="background: linear-gradient(135deg, var(--midnight-navy) 0%, color-mix(in srgb, var(--midnight-navy) 80%, var(--steel-pewter) 20%) 100%);"
+    class="absolute inset-0 opacity-80"
+    style="background: radial-gradient(ellipse at center, rgba(51, 65, 85, 0.1) 0%, rgba(30, 41, 59, 0.6) 40%, rgba(15, 23, 42, 0.9) 100%);"
   >
   </div>
 
   <!-- Content -->
-  <div class="relative z-10 w-full max-w-[1280px] mx-auto px-8">
-    <div class="space-y-8 text-left">
-      <!-- Small Title -->
-      <div class="animate-[fade-in_1s_ease-out]">
-        <span
-          class="inline-block font-semibold tracking-widest uppercase"
-          style="color: var(--helios-orange); font-size: 16px;"
-        >
-          Your Growth Partner
-        </span>
-      </div>
-
-      <!-- Main Heading -->
-      <div class="space-y-4 animate-[fade-in-up_1s_ease-out]">
-        <h1
-          class="hero-lcp text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight text-left"
-        >
-          <span class="text-white">Build. </span>
-          <span style="color: var(--helios-orange);">Grow. </span>
-          <span class="text-white">Dominate.</span>
-        </h1>
-
-        <p
-          class="hero-description leading-relaxed max-w-4xl text-white text-left"
-          style="font-size: 24px;"
-        >
-          Over 2,500 contractors and trades professionals have trusted us to 
-          elevate their digital presence and drive real results. Transform your business online and
-          reach more customers than ever before.
-        </p>
-      </div>
-
-      <!-- CTA Button -->
-      <div
-        class="pt-2 animate-[fade-in-up_1s_ease-out] opacity-0 [animation-delay:0.5s] [animation-fill-mode:forwards]"
-      >
-        <Button
-          variant="primary"
-          size="md"
-          href="/our-work"
-          ariaLabel="View our portfolio of completed projects"
-          theme="light"
-        >
-          VIEW OUR WORK
-          <svg
-            class="w-5 h-5 ml-2"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
+  <div class="relative z-10 w-full max-w-[1400px] mx-auto px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center min-h-[80vh]">
+      
+      <!-- Left Content -->
+      <div class="lg:col-span-5 space-y-6 animate-[fade-in-left_1s_ease-out]">
+        <!-- Small Title -->
+        <div class="mb-4">
+          <span
+            class="inline-block font-semibold tracking-[0.2em] uppercase text-sm"
+            style="color: var(--accent-red);"
           >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M17 8l4 4m0 0l-4 4m4-4H3"
-            ></path>
-          </svg>
-        </Button>
+            Your Growth Partner
+          </span>
+        </div>
+
+        <!-- Subtitle -->
+        <div class="space-y-2">
+          <h2 class="text-lg md:text-xl font-medium text-gray-300 tracking-wide">
+            Modern
+          </h2>
+          <p class="text-base text-gray-400 max-w-md leading-relaxed">
+            Created for you.
+          </p>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="space-y-4 pt-4">
+          <div>
+            <h3 class="text-lg font-semibold text-white mb-2 tracking-wide">
+              LIMITED PRE-ORDERS
+            </h3>
+            <p class="text-sm text-gray-400 max-w-sm leading-relaxed">
+              Own the next-generation website engineered for your comfort and bold individuality.
+            </p>
+          </div>
+          
+          <div class="pt-4">
+            <Button
+              variant="outline"
+              size="md"
+              href="/our-work"
+              ariaLabel="View our portfolio of completed projects"
+            >
+              VIEW OUR WORK
+              <svg
+                class="w-4 h-4 ml-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                ></path>
+              </svg>
+            </Button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Center - Large Typography -->
+      <div class="lg:col-span-7 flex items-center justify-center relative">
+        <!-- Main Heading - Large Background Text -->
+        <div class="text-center animate-[fade-in-up_1.2s_ease-out] opacity-0 [animation-delay:0.3s] [animation-fill-mode:forwards]">
+          <h1 class="hero-lcp font-black leading-[0.85] tracking-tighter select-none">
+            <div class="text-[8rem] md:text-[12rem] lg:text-[16rem] xl:text-[20rem] text-gray-600/20 font-black">
+              BUILD
+            </div>
+            <div class="text-[6rem] md:text-[9rem] lg:text-[12rem] xl:text-[15rem] -mt-8 md:-mt-12 lg:-mt-16">
+              <span style="color: var(--primary-blue);" class="font-black">GROW</span>
+            </div>
+            <div class="text-[8rem] md:text-[12rem] lg:text-[16rem] xl:text-[20rem] text-gray-600/20 font-black -mt-8 md:-mt-12 lg:-mt-16">
+              DOMINATE
+            </div>
+          </h1>
+        </div>
+
+        <!-- Floating Central Element -->
+        <div class="absolute inset-0 flex items-center justify-center animate-[float_6s_ease-in-out_infinite] opacity-0 [animation-delay:0.8s] [animation-fill-mode:forwards]">
+          <div class="relative">
+            <!-- Glowing orb effect -->
+            <div class="w-32 h-32 md:w-48 md:h-48 rounded-full bg-gradient-to-br from-blue-500/30 to-red-500/30 blur-xl animate-pulse"></div>
+            <div class="absolute inset-0 w-32 h-32 md:w-48 md:h-48 rounded-full border-2 border-white/20 backdrop-blur-sm flex items-center justify-center">
+              <div class="w-16 h-16 md:w-24 md:h-24 rounded-full bg-gradient-to-br from-blue-600 to-red-600 shadow-2xl"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Content -->
+      <div class="lg:col-span-12 lg:col-start-9 lg:col-end-13 space-y-6 animate-[fade-in-right_1s_ease-out] opacity-0 [animation-delay:0.5s] [animation-fill-mode:forwards]">
+        <div class="text-right">
+          <h3 class="text-lg font-semibold text-white mb-2 tracking-wide">
+            THIS MONTH'S EXCLUSIVE
+          </h3>
+          <p class="text-sm text-gray-400 max-w-sm ml-auto leading-relaxed">
+            Pre-order now and unlock exclusive pricing this month.
+          </p>
+          
+          <div class="pt-4">
+            <button class="inline-flex items-center text-sm text-gray-300 hover:text-white transition-colors duration-200 group">
+              See more info
+              <svg class="w-4 h-4 ml-2 transition-transform duration-200 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
   <!-- Slideshow Navigation Dots -->
   <div
-    class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex space-x-3 hidden"
+    class="absolute bottom-8 left-8 z-20 flex space-x-3"
   >
     <button
-      class="slideshow-dot w-3 h-3 rounded-full bg-amber-400 transition-all duration-300"
+      class="slideshow-dot w-2 h-2 rounded-full bg-[#2563EB] transition-all duration-300"
       data-slide="0"></button>
     <button
-      class="slideshow-dot w-3 h-3 rounded-full bg-white/50 hover:bg-white/75 transition-all duration-300"
+      class="slideshow-dot w-2 h-2 rounded-full bg-white/30 hover:bg-white/50 transition-all duration-300"
       data-slide="1"></button>
     <button
-      class="slideshow-dot w-3 h-3 rounded-full bg-white/50 hover:bg-white/75 transition-all duration-300"
+      class="slideshow-dot w-2 h-2 rounded-full bg-white/30 hover:bg-white/50 transition-all duration-300"
       data-slide="2"></button>
     <button
-      class="slideshow-dot w-3 h-3 rounded-full bg-white/50 hover:bg-white/75 transition-all duration-300"
+      class="slideshow-dot w-2 h-2 rounded-full bg-white/30 hover:bg-white/50 transition-all duration-300"
       data-slide="3"></button>
     <button
-      class="slideshow-dot w-3 h-3 rounded-full bg-white/50 hover:bg-white/75 transition-all duration-300"
+      class="slideshow-dot w-2 h-2 rounded-full bg-white/30 hover:bg-white/50 transition-all duration-300"
       data-slide="4"></button>
   </div>
 </section>
@@ -174,11 +225,11 @@ const {
 
       dots.forEach((dot, i) => {
         if (i === index) {
-          dot.classList.remove("bg-white/50");
-          dot.classList.add("bg-amber-400");
+          dot.classList.remove("bg-white/30");
+          dot.classList.add("bg-[#2563EB]");
         } else {
-          dot.classList.remove("bg-amber-400");
-          dot.classList.add("bg-white/50");
+          dot.classList.remove("bg-[#2563EB]");
+          dot.classList.add("bg-white/30");
         }
       });
     }
@@ -228,6 +279,50 @@ const {
     to {
       opacity: 1;
       transform: translateY(0);
+    }
+  }
+
+  @keyframes fade-in-left {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes fade-in-right {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  /* Responsive typography adjustments */
+  @media (max-width: 768px) {
+    .hero-lcp div {
+      font-size: 4rem !important;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .hero-lcp div {
+      font-size: 3rem !important;
     }
   }
 </style>
