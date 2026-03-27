@@ -251,6 +251,6 @@
 }
 
 .mobile-nav-item.active {
-  color: var(--primary-purple);
-  background-color: rgba(179, 71, 217, 0.1);
+  color: var(--bright-cyan);
+  background-color: rgba(148, 249, 253, 0.1);
 }
