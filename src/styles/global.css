@@ -7,41 +7,44 @@
 
 /* Global Design Tokens */
 :root {
-  /* Core Identity - Brand Colors */
-  --primary-blue: #2563EB;
-  --secondary-gray-blue: #64748B;
-  --accent-red: #DC2626;
+  /* Core Identity - Brand Colors from Image */
+  --primary-purple: #B347D9;
+  --secondary-purple: #8B5CF6;
+  --accent-magenta: #D946EF;
   --neutral-white: #FFFFFF;
-  --text-charcoal: #334155;
+  --text-charcoal: #1F2937;
 
-  /* New Modern Palette - From Design Reference */
-  --dark-navy: #161F30;
-  --bright-cyan: #94F9FD;
-  --bright-blue: #2F8EF8;
+  /* Dark Theme Palette - From Design Reference */
+  --dark-charcoal: #1A1A1A;
+  --medium-gray: #2D2D2D;
+  --light-gray: #4A4A4A;
+  --text-gray: #9CA3AF;
   --pure-white: #FFFFFF;
 
   /* UI Surfaces & Text */
-  --parchment: #F5F5F5;
-  --machinist: #7E7E7E;
-  --muted: #9CA3AF;
+  --surface-dark: #0F0F0F;
+  --surface-medium: #1E1E1E;
+  --surface-light: #2A2A2A;
+  --text-muted: #6B7280;
+  --text-secondary: #D1D5DB;
 
   /* Status & Data */
-  --success: #34D399;
-  --info: #22D3EE;
-  --warning: #F5A623;
-  --highlight: #F472B6; 
+  --success: #10B981;
+  --info: #3B82F6;
+  --warning: #F59E0B;
+  --error: #EF4444;
 
   /* Semantic Color Mapping */
-  --primary-color: var(--bright-blue);
-  --secondary-color: var(--bright-cyan);
-  --accent-color: var(--bright-cyan);
+  --primary-color: var(--primary-purple);
+  --secondary-color: var(--secondary-purple);
+  --accent-color: var(--accent-magenta);
   --text-primary: var(--pure-white);
-  --text-secondary: var(--bright-cyan);
-  --text-muted: var(--muted);
-  --background: var(--dark-navy);
-  --surface: var(--dark-navy);
-  --button-color: var(--bright-blue);
-  --button-hover: var(--bright-cyan);
+  --text-secondary: var(--text-secondary);
+  --text-muted: var(--text-muted);
+  --background: var(--dark-charcoal);
+  --surface: var(--surface-dark);
+  --button-color: var(--primary-purple);
+  --button-hover: var(--accent-magenta);
 
   /* Font Variables */
   --font-primary: 'Poppins', ui-sans-serif, system-ui, sans-serif;
@@ -109,98 +112,102 @@
 }
 
 .bg-parchment {
-  background-color: var(--parchment);
+  background-color: var(--surface-light);
 }
 
 .text-machinist {
-  color: var(--machinist);
+  color: var(--light-gray);
 }
 
 .text-muted {
-  color: var(--muted);
+  color: var(--text-muted);
 }
 
 .text-steel-pewter {
-  color: var(--secondary-gray-blue);
+  color: var(--text-gray);
 }
 
 /* Enhanced Component Classes */
 .btn-success {
-  @apply bg-[#34D399] hover:bg-[#10b981] text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200;
+  @apply bg-[#10B981] hover:bg-[#059669] text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200;
 }
 
 .btn-warning {
-  @apply bg-[#F5A623] hover:bg-[#d97706] text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200;
+  @apply bg-[#F59E0B] hover:bg-[#D97706] text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200;
 }
 
 .btn-info {
-  @apply bg-[#22D3EE] hover:bg-[#0891b2] text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200;
+  @apply bg-[#3B82F6] hover:bg-[#2563EB] text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200;
 }
 
 .alert-success {
-  @apply bg-green-50 border border-[#34D399] text-green-800 p-4 rounded-lg;
+  @apply bg-green-900/20 border border-[#10B981] text-green-300 p-4 rounded-lg;
 }
 
 .alert-warning {
-  @apply bg-yellow-50 border border-[#F5A623] text-yellow-800 p-4 rounded-lg;
+  @apply bg-yellow-900/20 border border-[#F59E0B] text-yellow-300 p-4 rounded-lg;
 }
 
 .alert-info {
-  @apply bg-blue-50 border border-[#22D3EE] text-blue-800 p-4 rounded-lg;
+  @apply bg-blue-900/20 border border-[#3B82F6] text-blue-300 p-4 rounded-lg;
 }
 
-/* Modern Palette Utility Classes */
-.bg-dark-navy {
-  background-color: var(--dark-navy);
+/* Modern Dark Palette Utility Classes */
+.bg-dark-charcoal {
+  background-color: var(--dark-charcoal);
 }
 
-.bg-bright-cyan {
-  background-color: var(--bright-cyan);
+.bg-medium-gray {
+  background-color: var(--medium-gray);
 }
 
-.bg-bright-blue {
-  background-color: var(--bright-blue);
+.bg-primary-purple {
+  background-color: var(--primary-purple);
 }
 
-.text-dark-navy {
-  color: var(--dark-navy);
+.bg-accent-magenta {
+  background-color: var(--accent-magenta);
 }
 
-.text-bright-cyan {
-  color: var(--bright-cyan);
+.text-dark-charcoal {
+  color: var(--dark-charcoal);
 }
 
-.text-bright-blue {
-  color: var(--bright-blue);
+.text-primary-purple {
+  color: var(--primary-purple);
 }
 
-.border-bright-cyan {
-  border-color: var(--bright-cyan);
+.text-accent-magenta {
+  color: var(--accent-magenta);
 }
 
-.border-bright-blue {
-  border-color: var(--bright-blue);
+.border-primary-purple {
+  border-color: var(--primary-purple);
+}
+
+.border-accent-magenta {
+  border-color: var(--accent-magenta);
 }
 
 /* Global Component Classes */
 .btn-primary {
-  @apply bg-[var(--bright-blue)] hover:bg-[var(--bright-cyan)] text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200;
+  @apply bg-[var(--primary-purple)] hover:bg-[var(--accent-magenta)] text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200;
 }
 
 .btn-secondary {
-  @apply bg-[var(--bright-cyan)] hover:bg-[var(--bright-blue)] text-[var(--dark-navy)] font-semibold py-2 px-4 rounded-lg transition-colors duration-200;
+  @apply bg-[var(--secondary-purple)] hover:bg-[var(--primary-purple)] text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200;
 }
 
 .btn-outline {
-  @apply border-2 border-[var(--bright-cyan)] text-[var(--bright-cyan)] hover:bg-[var(--bright-cyan)] hover:text-[var(--dark-navy)] font-semibold py-2 px-4 rounded-lg transition-all duration-200;
+  @apply border-2 border-[var(--primary-purple)] text-[var(--primary-purple)] hover:bg-[var(--primary-purple)] hover:text-white font-semibold py-2 px-4 rounded-lg transition-all duration-200;
 }
 
 .card {
-  @apply bg-[var(--dark-navy)] rounded-lg shadow-md p-6 border border-[var(--bright-cyan)];
+  @apply bg-[var(--surface-medium)] rounded-lg shadow-md p-6 border border-[var(--light-gray)];
 }
 
 .card-hover {
-  @apply bg-[var(--dark-navy)] rounded-lg shadow-md hover:shadow-lg p-6 border border-[var(--bright-cyan)] transition-shadow duration-200;
+  @apply bg-[var(--surface-medium)] rounded-lg shadow-md hover:shadow-lg p-6 border border-[var(--light-gray)] transition-shadow duration-200;
 }
 
 .heading-primary {
@@ -208,11 +215,11 @@
 }
 
 .heading-secondary {
-  @apply text-2xl md:text-3xl font-semibold text-[var(--bright-cyan)];
+  @apply text-2xl md:text-3xl font-semibold text-[var(--primary-purple)];
 }
 
 .text-body {
-  @apply text-[var(--pure-white)] leading-relaxed;
+  @apply text-[var(--text-secondary)] leading-relaxed;
 }
 
 .container-custom {
@@ -240,7 +247,7 @@
 
 /* Navbar Active States */
 .nav-item.active {
-  color: var(--bright-cyan);
+  color: var(--primary-purple);
 }
 
 .mobile-nav-item.active {
